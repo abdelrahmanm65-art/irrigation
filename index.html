@@ -11,31 +11,31 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{--bg:#0e1f1d;--card:#142a27;--ink:#e3f1ec;--mut:#8fb0a9;--line:#24413d;--map:#0f2220}
 *{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,system-ui,sans-serif}
-header{background:var(--card);border-bottom:4px solid transparent;border-image:linear-gradient(to left,var(--g1),var(--g2),var(--g3)) 1;display:flex;align-items:center;gap:18px;padding:12px 24px;flex-wrap:wrap}
-header img{height:64px;background:#fff;border-radius:8px;padding:2px}
-header h1{margin:0;font-size:24px;font-weight:800}header p{margin:2px 0 0;color:var(--mut);font-size:14px}
+header{background:var(--card);border-bottom:4px solid transparent;border-image:linear-gradient(to left,var(--g1),var(--g2),var(--g3)) 1;display:flex;align-items:center;gap:18px;padding:8px 24px;flex-wrap:wrap}
+header img{height:52px;background:#fff;border-radius:8px;padding:2px}
+header h1{margin:0;font-size:20px;font-weight:800}header p{margin:2px 0 0;color:var(--mut);font-size:14px}
 .sp{flex:1}
 button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 14px}
 button:hover{border-color:var(--g2)}
-main{padding:18px 24px;max-width:1500px;margin:auto}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:16px}
-.kpi{border-radius:14px;padding:14px 16px;color:#fff;background:linear-gradient(135deg,var(--g3),var(--g2))}
+main{padding:12px 20px;max-width:1800px;margin:auto}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:12px}
+.kpi{border-radius:12px;padding:8px 12px;color:#fff;background:linear-gradient(135deg,var(--g3),var(--g2))}
 .kpi:nth-child(2){background:linear-gradient(135deg,var(--g3),#2d8a72)}.kpi:nth-child(5){background:linear-gradient(135deg,var(--g2),var(--g1))}
-.kpi b{display:block;font-size:30px;font-weight:800;line-height:1.2}.kpi span{font-size:14px;opacity:.92}
-.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px}
+.kpi b{display:block;font-size:22px;font-weight:800;line-height:1.2}.kpi span{font-size:12px;opacity:.92}
+.grid{display:grid;grid-template-columns:minmax(0,2.4fr) minmax(0,1fr);gap:12px}
 @media(max-width:980px){.grid{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.card h2{margin:0 0 10px;font-size:16px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
-.card h2 small{color:var(--mut);font-weight:400;font-size:12px}
-.charts{display:grid;gap:16px;align-content:start}
-#mapw{position:relative;height:620px;border-radius:10px;overflow:hidden;background:var(--map);touch-action:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.card h2{margin:0 0 4px;font-size:13px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.card h2 small{color:var(--mut);font-weight:400;font-size:11px}
+.charts{display:grid;gap:8px;align-content:start}
+#mapw{position:relative;height:calc(100vh - 190px);min-height:700px;border-radius:10px;overflow:hidden;background:var(--map);touch-action:none}
 canvas{width:100%;height:100%;display:block;cursor:grab}
 .zb{position:absolute;top:10px;left:10px;display:grid;gap:6px}.zb button{width:34px;padding:4px 0;font-size:18px}
 #info{position:absolute;bottom:10px;right:10px;left:10px;max-width:420px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;display:none;box-shadow:0 4px 18px #0003}
 #info b{font-size:15px}#info div{color:var(--mut);margin-top:3px}
-.row{display:grid;grid-template-columns:150px 1fr 74px;gap:8px;align-items:center;padding:3px 4px;border-radius:6px;cursor:pointer;font-size:13px}
+.row{display:grid;grid-template-columns:118px 1fr 52px;gap:6px;align-items:center;padding:1px 3px;border-radius:6px;cursor:pointer;font-size:11.5px}
 .row:hover{background:var(--bg)}.row.on{background:var(--bg);outline:1.5px solid var(--g2)}.row.off{opacity:.4}
-.row .t{background:var(--bg);height:12px;border-radius:6px;overflow:hidden}.row .t i{display:block;height:100%;border-radius:6px}
+.row .t{background:var(--bg);height:8px;border-radius:5px;overflow:hidden}.row .t i{display:block;height:100%;border-radius:6px}
 .row em{font-style:normal;text-align:left;font-weight:700;direction:ltr}
 .chip{display:none;background:var(--g2);color:#fff;border-radius:20px;padding:3px 12px;font-size:12px;margin-inline-start:6px}
 .hint{color:var(--mut);font-size:12px;margin:10px 2px 0}
@@ -48,6 +48,7 @@ canvas{width:100%;height:100%;display:block;cursor:grab}
 <div class="zb"><button id="sat" title="خلفية القمر الصناعي" style="font-size:15px">🛰</button><button id="zi">+</button><button id="zo">−</button><button id="zf">⌂</button></div><div id="info"></div></div></div>
 <div class="charts">
 <div class="card"><h2>أطوال الخطوط حسب المرحلة <small>كم</small></h2><div id="c1"></div></div>
+<div class="card"><h2>الخزانات حسب المرحلة <small>العدد</small></h2><div id="c5"></div></div>
 <div class="card"><h2>أطوال الخطوط حسب القطر <small>كم</small></h2><div id="c2"></div></div>
 <div class="card"><h2>الخزانات حسب التصنيف <small>العدد</small></h2><div id="c3"></div></div>
 <div class="card"><h2>الخزانات حسب مصدر التغذية <small>العدد</small></h2><div id="c4"></div></div>
@@ -62,10 +63,12 @@ const PH2P={'المرحلة الأولى':'الأولى','المرحلة الث�
 const SHORT={'خط من المؤسسة العامة للري الى خزان الخليل':'خط المؤسسة → خزان الخليل'};
 const PHC={'المرحلة الأولى':'#63c54b','المرحلة الثانية':'#36a07b','المرحلة الثالثة':'#287067','المرحلة الرابعة':'#b6d94c','المرحلة الخامسة':'#1f9fa8','المرحلة السابعة':'#7a5fb0','خط الدعم':'#d9a21b','خط العاقول':'#e2733c','خط من المؤسسة العامة للري الى خزان الخليل':'#8a5a3c'};
 const CLC={'خزان ري':'#36a07b','خزان دعم':'#63c54b','خزان دعم ورى':'#b6d94c','بئر':'#1b524b','شيب':'#d9a21b','خزان ري مقترح':'#9fb8b2','غير مصنف':'#c3cfcc'};
+const P2PH=Object.fromEntries(Object.entries(PH2P).map(([a,b])=>[b,a]));
+const pk=p=>P2PH[p.ph]||(p.ph==='تعبئة تنكر'?'تعبئة تنكر':'غير محدد');
 const F={ph:null,dia:null,cls:null,src:null};
 const fmt=(v,d=0)=>v.toLocaleString('ar-SA-u-nu-latn',{maximumFractionDigits:d});
 const linesF=ex=>L.filter(l=>(ex==='ph'||!F.ph||l.n===F.ph)&&(ex==='dia'||!F.dia||l.d===F.dia));
-const ptsF=ex=>P.filter(p=>(ex==='ph'||!F.ph||p.ph===PH2P[F.ph])&&(ex==='cls'||!F.cls||p.cls===F.cls)&&(ex==='src'||!F.src||p.src===F.src));
+const ptsF=ex=>P.filter(p=>(ex==='ph'||!F.ph||pk(p)===F.ph)&&(ex==='cls'||!F.cls||p.cls===F.cls)&&(ex==='src'||!F.src||p.src===F.src));
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 function group(arr,key,val){const m=new Map();arr.forEach(o=>m.set(key(o),(m.get(key(o))||0)+val(o)));return m}
 function bars(id,fk,m,order,color,lab,f){
@@ -78,6 +81,8 @@ function bars(id,fk,m,order,color,lab,f){
 function charts(){
   const g1=group(linesF('ph'),l=>l.n,l=>l.len/1000);
   bars('c1','ph',g1,[...g1.keys()].sort((a,b)=>g1.get(b)-g1.get(a)),k=>PHC[k]||'#999',k=>SHORT[k]||k,v=>fmt(v,1));
+  const g5=group(ptsF('ph').filter(p=>p.cls.includes('خزان')),pk,()=>1);
+  bars('c5','ph',g5,[...g5.keys()].sort((a,b)=>g5.get(b)-g5.get(a)),k=>PHC[k]||'#9fb8b2',k=>SHORT[k]||k,v=>fmt(v));
   const g2=group(linesF('dia'),l=>l.d,l=>l.len/1000);
   bars('c2','dia',g2,[...g2.keys()].sort((a,b)=>b-a),()=> '#36a07b',k=>'قطر '+k+' مم',v=>fmt(v,1));
   const g3=group(ptsF('cls'),p=>p.cls,()=>1);
@@ -89,7 +94,7 @@ function kpis(){
   const ls=linesF(),ps=ptsF(),tk=ls.reduce((s,l)=>s+l.len,0)/1000;
   const res=ps.filter(p=>p.cls.includes('خزان')),wl=ps.filter(p=>p.cls==='بئر');
   const vol=res.reduce((s,p)=>s+p.vol,0);
-  const k=[['طول الخطوط (كم)',fmt(tk,1)],['عدد الخطوط',fmt(ls.length)],['الخزانات',fmt(res.length)],['الآبار',fmt(wl.length)],['إجمالي سعة الخزانات (م³)',fmt(vol)]];
+  const k=[['طول الخطوط (كم)',fmt(tk,1)],['الخزانات',fmt(res.length)],['الآبار',fmt(wl.length)],['إجمالي سعة الخزانات (م³)',fmt(vol)]];
   document.getElementById('kpis').innerHTML=k.map(x=>`<div class="kpi"><b>${x[1]}</b><span>${x[0]}</span></div>`).join('');
   const act=[F.ph&&(SHORT[F.ph]||F.ph),F.dia&&'قطر '+F.dia,F.cls,F.src].filter(Boolean),c=document.getElementById('chip');
   c.style.display=act.length?'inline-block':'none';c.textContent='التصفية: '+act.join(' • ');
